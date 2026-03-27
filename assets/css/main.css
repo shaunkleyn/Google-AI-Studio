@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-background: #080e1c;
+  --color-on-background: #e2e7fc;
+  --color-surface: #080e1c;
+  --color-on-surface: #e2e7fc;
+  --color-surface-container: #12192a;
+  --color-surface-container-high: #171f32;
+  --color-surface-container-highest: #1d253a;
+  --color-primary: #49f4c8;
+  --color-on-primary: #005745;
+  --color-primary-container: #00d4aa;
+  --color-on-primary-container: #004132;
+  --color-secondary: #af88ff;
+  --color-secondary-container: #6001d1;
+  --color-tertiary: #6cd9ff;
+  --color-tertiary-container: #00cffe;
+  --color-outline: #6f7587;
+  --color-outline-variant: #424858;
+  --color-on-surface-variant: #a5abbe;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-sans antialiased;
+  }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.grid-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.pulse-gradient {
+  background: radial-gradient(circle at top right, rgba(124, 58, 237, 0.15), transparent),
+              radial-gradient(circle at bottom left, rgba(0, 212, 170, 0.1), transparent);
+}
